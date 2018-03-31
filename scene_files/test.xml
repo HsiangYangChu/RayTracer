@@ -1,0 +1,42 @@
+<scene>
+    <viewplane hres="2048" vres="1024" pixel_size="1" samples="16" depth ="3">
+    </viewplane>
+
+    <tracer>
+        <RayCast>
+        </RayCast>
+    </tracer>
+    
+    <data>
+        <mat type="material">
+            <Matte ka="1" kd="0"></Matte>
+        </mat>
+    </data>
+    
+    <objects>
+        <Sphere center="(0,0,0)" r="2">
+            <material>mat</material>
+        </Sphere>
+        
+        <Sphere center="(2,0.5,-5)" r="3">
+                    <material>mat</material>
+        </Sphere>
+        
+        <Sphere center="(-3,0,2)" r="1.5">
+                    <material>mat</material>
+        </Sphere>
+        
+        <Sphere center="(2,0,0)" r="1">
+                    <material>mat</material>
+        </Sphere>
+        
+        <Sphere center="(0,0,3)" r="0.2">
+                    <material>mat</material>
+        </Sphere>
+    </objects>
+
+    <camera>
+        <Pinhole eye="(0,0,6)" look_at="(0,0,1)" fov="100">
+        </Pinhole>
+    </camera>
+</scene>

@@ -1,0 +1,36 @@
+<scene>
+    <viewplane hres="1340" vres="1340" samples="1024" depth ="5">
+    </viewplane>
+    
+    <background>
+        <SphereSky file="textures/sky3.jpg"></SphereSky>
+    </background>
+
+    <tracer>
+        <AreaLighting>
+        </AreaLighting>
+    </tracer>
+
+    <objects>             
+        <Sphere center="(-6,55,0)" r="40">
+            <material><GlossyReflector ka="0" kd="0" ks="0" e="10" cd="(255,255,76)" cr="(255,255,76)" kr="0.9"></GlossyReflector></material>
+        </Sphere>
+        <Sphere center="(-6,155,0)" r="40">
+            <material><GlossyReflector ka="0" kd="0" ks="0" e="100" cd="(255,255,76)" cr="(76,255,255)" kr="0.9"></GlossyReflector></material>
+        </Sphere>
+        <Sphere center="(-6,-45,0)" r="40">
+            <material><GlossyReflector ka="0" kd="0" ks="0" e="500" cd="(255,255,76)" cr="(255,76,255)" kr="0.9"></GlossyReflector></material>
+        </Sphere>
+        <Sphere center="(94,55,0)" r="40">
+            <material><GlossyReflector ka="0" kd="0" ks="0" e="1000" cd="(255,255,76)" cr="(76,255,76)" kr="0.9"></GlossyReflector></material>
+        </Sphere>
+        <Sphere center="(-106,55,0)" r="40">
+            <material><GlossyReflector ka="0" kd="0" ks="0" e="5000" cd="(255,255,76)" cr="(255,255,255)" kr="0.9"></GlossyReflector></material>
+        </Sphere>
+    </objects>
+
+    <camera>
+        <Pinhole eye="(-150,75,500)" look_at="(-6,50,0)" fov="40">
+        </Pinhole>
+    </camera>
+</scene>

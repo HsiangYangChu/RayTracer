@@ -1,0 +1,67 @@
+<scene>
+    <viewplane hres="1980" vres="400" pixel_size="1920" samples="256" depth ="3">
+    </viewplane>
+
+    <ambient>
+        <AmbientOccluder>
+        </AmbientOccluder>
+    </ambient>
+
+    <background>
+        <SphereSky file="textures/sky.jpg">
+        </SphereSky>
+    </background>
+
+    <tracer>
+        <AreaLighting>
+        </AreaLighting>
+    </tracer>
+    
+    <objects>
+        
+        <Instance>
+        
+            <object>
+                <TriangleMesh file="models/beethoven" type="smooth"></TriangleMesh>  
+            </object>
+            
+            <material>
+                <Phong ka="0.2" kd="0.5" cd="(255,255,255)" ks="0.0" e="100"></Phong>            
+            </material>
+            
+            <translate x="0" y="3" z="0"></translate>
+            <scale x="1.5" y="1.5" z="1.5"></scale>
+            <rotate_z angle="0"></rotate_z>
+            <translate x="0" y="-5" z="0"></translate>
+        </Instance>
+        
+        <Plane point="(0,-10,0)" normal="(0,1,0)">
+            <material>
+                <Reflective ka="0.2" kd="0.5" cd="(51,255,51)" ks="0.15" e="10" kr="0.15"></Reflective>
+            </material>
+        </Plane>
+    </objects>
+
+    <lights>
+        <AreaLight>
+            <object>
+                <Disk point="(0,0,21)" normal="(0,0,-1)" min_r="0" max_r="3">
+                    <material><Emissive ls="60"></Emissive></material>
+                </Disk>
+            </object>
+        </AreaLight>
+        
+        <AreaLight>
+            <object>
+                <Disk point="(-12,15,-5)" normal="(1,-1,0)" min_r="0" max_r="3">
+                    <material><Emissive ls="60" ce="(255,255,204)"></Emissive></material>
+                </Disk>
+            </object>
+        </AreaLight>
+    </lights>
+
+    <camera>
+        <ThinLens eye="(0,0,20)" look_at="(0,0,0)" distance="180" focal="18" radius="0.7">
+        </ThinLens>
+    </camera>
+</scene>

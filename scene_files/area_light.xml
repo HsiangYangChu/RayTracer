@@ -1,0 +1,51 @@
+<scene>
+    <viewplane hres="600" vres="600" pixel_size="1" samples="16" depth ="5">
+    </viewplane>
+
+    <tracer>
+        <AreaLighting>
+        </AreaLighting>
+    </tracer>
+    
+    <ambient>
+        <AmbientOccluder></AmbientOccluder>
+    </ambient>
+    
+    <objects>        
+        <Plane>
+            <material><Matte ka="0.1" kd="0.9"></Matte></material>
+        </Plane>
+        <Instance>
+            <object><Sphere></Sphere></object>
+            <material><Phong ka="0.25" kd="0.65" cd="(102,178,102)" ks="0.1" e="10"></Phong></material>
+            <translate x="-5" y="1"></translate>
+        </Instance>
+        <Sphere center="(-1,1,0)" r="1">
+            <material><Phong ka="0.25" kd="0.55" cd="(102,178,102)" ks="0.2" e="10"></Phong></material>
+        </Sphere>
+        <Sphere center="(3,1,0)" r="1">
+            <material><Phong ka="0.25" kd="0.45" cd="(102,178,102)" ks="0.3" e="10"></Phong></material>
+        </Sphere>
+        <Instance>
+            <object><Sphere></Sphere></object>
+            <material><Reflective ka="0.25" kd="0.45" cd="(102,178,102)" ks="0.4" e="50" kr="0.4"></Reflective></material>
+            <scale x="1" y="1" z="2"></scale>
+            <translate x="7" y="1" z="0"></translate>
+        </Instance>
+    </objects>
+
+    <lights>
+        <AreaLight>
+            <object>
+                <Disk point="(0,7,-7)" normal="(0,0,1)" min_r="0" max_r="2.24">
+                    <material><Emissive ls="40" ce="(255, 255, 204)"></Emissive></material>
+                </Disk>
+            </object>
+        </AreaLight>
+    </lights>
+
+    <camera>
+        <Pinhole eye="(-20,10,20)" look_at="(0,2,0)" distance="1080">
+        </Pinhole>
+    </camera>
+</scene>
